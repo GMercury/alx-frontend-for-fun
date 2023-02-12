@@ -189,29 +189,32 @@
     clip: rect(1px, 1px, 1px, 1px);
     white-space: nowrap;
   }
-  .off-screen{
+  
+  .off-screen {
     left: -100vw;
     position: absolute;
   }
 
-  .skip-link{
+  .skip-link {
     background: var(--color-black);
     color: var(--color-white);
     left: 0;
-    padding: 0-.7rem;
+    padding: .7rem;
     position: fixed;
     opacity: 0;
     top: 0;
     z-index: 10;
     transform: translateY(-1rem);
-    transition: transform .2s ease-in-out, opacity 0.2s ease-in-out
-    ;
+    transition: transform .2s ease-in-out, opacity .2s ease-in-out;
   }
-  .skip-link:focus{
+
+  .skip-link:focus {
     opacity: 1;
     transform: translateY(0);
   }
-  
+
+
+
   /*** 2. LAYOUT ***/
   
   /* Layout
@@ -686,7 +689,6 @@
   .card-work .card-title {
     text-align: center;
     margin: 0;
-   
     height: 100%;
     position: relative;
   }
@@ -698,10 +700,11 @@
     opacity: 0;
   }
 
-  .card-work .card-title a:focus {
-      opacity: 1;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
+  .card-work .card-title a:focus,
+  .card-work:hover .card-title a{
+    opacity: 1;
+    height: 100%;
+    background-color: rgba(0,0,0,0.7);
   }
   
   .card-work .card-title a::after {
@@ -713,11 +716,6 @@
     content: '';
   }
   
-  .card-work:hover .card-title a{
-    opacity: 1;
-      height: 100%;
-      background-color: rgba(0, 0, 0, 0.7);
-  }
   /* .card-work:hover .card-title {
     opacity: 1;
   } */
